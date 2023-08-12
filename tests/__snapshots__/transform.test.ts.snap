@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`transform > tests/fixtures/basic.css 1`] = `
+"
+
+.red{color:red}
+"
+`;
+
+exports[`transform > tests/fixtures/import.css 1`] = `
+"
+
+@import \\"./basic.css\\";
+"
+`;
+
+exports[`transform > tests/fixtures/nesting.css 1`] = `
+"
+
+.a .b{color:red}
+"
+`;
