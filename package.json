@@ -2,7 +2,7 @@
   "name": "unplugin-lightningcss",
   "version": "0.0.1",
   "packageManager": "pnpm@8.6.12",
-  "description": "Unplugin for Lightning CSS.",
+  "description": "Lightning CSS integration for Vite, Rollup, esbuild, Webpack, Vue CLI, and more.",
   "keywords": [
     "unplugin",
     "rollup",
@@ -28,42 +28,22 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": {
-        "require": "./dist/index.d.ts",
-        "import": "./dist/index.d.mts"
-      },
       "require": "./dist/index.js",
       "import": "./dist/index.mjs"
     },
     "./vite": {
-      "types": {
-        "require": "./dist/vite.d.ts",
-        "import": "./dist/vite.d.mts"
-      },
       "require": "./dist/vite.js",
       "import": "./dist/vite.mjs"
     },
     "./webpack": {
-      "types": {
-        "require": "./dist/webpack.d.ts",
-        "import": "./dist/webpack.d.mts"
-      },
       "require": "./dist/webpack.js",
       "import": "./dist/webpack.mjs"
     },
     "./rollup": {
-      "types": {
-        "require": "./dist/rollup.d.ts",
-        "import": "./dist/rollup.d.mts"
-      },
       "require": "./dist/rollup.js",
       "import": "./dist/rollup.mjs"
     },
     "./esbuild": {
-      "types": {
-        "require": "./dist/esbuild.d.ts",
-        "import": "./dist/esbuild.d.mts"
-      },
       "require": "./dist/esbuild.js",
       "import": "./dist/esbuild.mjs"
     },
