@@ -2,7 +2,7 @@
 
 [![Unit Test](https://github.com/sxzz/unplugin-lightningcss/actions/workflows/unit-test.yml/badge.svg)](https://github.com/sxzz/unplugin-lightningcss/actions/workflows/unit-test.yml)
 
-Starter template for [unplugin](https://github.com/unjs/unplugin).
+Lightning CSS integration for Vite, Rollup, esbuild, Webpack, Vue CLI, and more.
 
 ## Installation
 
@@ -60,20 +60,6 @@ build({
 module.exports = {
   /* ... */
   plugins: [require('unplugin-lightningcss/webpack')()],
-}
-```
-
-<br></details>
-
-<details>
-<summary>Vue CLI</summary><br>
-
-```ts
-// vue.config.js
-module.exports = {
-  configureWebpack: {
-    plugins: [require('unplugin-lightningcss/webpack')()],
-  },
 }
 ```
 
