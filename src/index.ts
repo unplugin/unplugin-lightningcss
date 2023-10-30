@@ -4,7 +4,7 @@ import { transform } from 'lightningcss'
 import { type Options, resolveOption } from './core/options'
 
 const postfixRE = /[#?].*$/s
-export function cleanUrl(url: string): string {
+function cleanUrl(url: string): string {
   return url.replace(postfixRE, '')
 }
 
