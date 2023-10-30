@@ -12,9 +12,6 @@ describe('transform', async () => {
         LightningCSS({
           options: {
             minify: true,
-            drafts: {
-              nesting: true,
-            },
             targets: {
               ie: 11,
             },
