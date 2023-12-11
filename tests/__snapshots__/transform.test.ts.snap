@@ -10,7 +10,7 @@ exports[`transform > tests/fixtures/basic.css 1`] = `
 exports[`transform > tests/fixtures/import.css 1`] = `
 "
 
-@import \\"./basic.css\\";
+@import "./basic.css";
 "
 `;
 
