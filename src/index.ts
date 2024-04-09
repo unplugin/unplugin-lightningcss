@@ -1,3 +1,4 @@
+import { Buffer } from 'node:buffer'
 import { createUnplugin } from 'unplugin'
 import { createFilter } from '@rollup/pluginutils'
 import { transform } from 'lightningcss'

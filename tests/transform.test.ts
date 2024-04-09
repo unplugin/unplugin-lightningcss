@@ -19,6 +19,6 @@ describe('transform', async () => {
         }),
         css(),
       ]),
-    { cwd: resolve(__dirname, '..'), promise: true }
+    { cwd: resolve(__dirname, '..'), promise: true },
   )
 })
