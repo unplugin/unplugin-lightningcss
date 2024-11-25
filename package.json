@@ -80,7 +80,7 @@
     "unplugin": "^1.10.1"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^3.9.0",
+    "@sxzz/eslint-config": "^4.5.0",
     "@sxzz/prettier-config": "^2.0.1",
     "@types/node": "^20.12.6",
     "@types/rollup-plugin-css-only": "^3.1.3",
