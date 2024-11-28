@@ -1,13 +1,7 @@
-import { Buffer } from 'node:buffer'
 import { createFilter } from '@rollup/pluginutils'
-import { transform } from 'lightningcss'
 import { createUnplugin, type UnpluginInstance } from 'unplugin'
 import { resolveOption, type Options } from './core/options'
-
-const postfixRE = /[#?].*$/s
-function cleanUrl(url: string): string {
-  return url.replace(postfixRE, '')
-}
+import { transformCss } from './core/transform'
 
 const plugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
   (rawOptions = {}) => {
@@ -31,16 +25,3 @@ const plugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
 )
 
 export default plugin
-
-function transformCss(id: string, code: string, options: Options['options']) {
-  const filename = cleanUrl(id)
-  const res = transform({
-    ...options,
-    filename,
-    code: Buffer.from(code),
-  })
-  return {
-    code: res.code.toString(),
-    map: 'map' in res ? res.map?.toString() : undefined,
-  }
-}

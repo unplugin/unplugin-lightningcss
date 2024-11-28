@@ -36,6 +36,10 @@
       "require": "./dist/index.cjs",
       "import": "./dist/index.js"
     },
+    "./api": {
+      "require": "./dist/api.cjs",
+      "import": "./dist/api.js"
+    },
     "./vite": {
       "require": "./dist/vite.cjs",
       "import": "./dist/vite.js"
