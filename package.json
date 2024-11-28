@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "packageManager": "pnpm@8.15.6",
   "description": "Lightning CSS integration for Vite, Rollup, esbuild, Webpack, Vue CLI, and more.",
+  "type": "module",
   "keywords": [
     "unplugin",
+    "css",
     "rollup",
+    "rolldown",
     "vite",
     "esbuild",
-    "webpack"
+    "webpack",
+    "rspack",
+    "farm"
   ],
   "license": "MIT",
   "homepage": "https://github.com/unplugin/unplugin-lightningcss#readme",
@@ -24,28 +29,40 @@
     "dist"
   ],
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
     },
     "./vite": {
-      "require": "./dist/vite.js",
-      "import": "./dist/vite.mjs"
+      "require": "./dist/vite.cjs",
+      "import": "./dist/vite.js"
     },
     "./webpack": {
-      "require": "./dist/webpack.js",
-      "import": "./dist/webpack.mjs"
+      "require": "./dist/webpack.cjs",
+      "import": "./dist/webpack.js"
+    },
+    "./rspack": {
+      "require": "./dist/rspack.cjs",
+      "import": "./dist/rspack.js"
     },
     "./rollup": {
-      "require": "./dist/rollup.js",
-      "import": "./dist/rollup.mjs"
+      "require": "./dist/rollup.cjs",
+      "import": "./dist/rollup.js"
+    },
+    "./rolldown": {
+      "require": "./dist/rolldown.cjs",
+      "import": "./dist/rolldown.js"
     },
     "./esbuild": {
-      "require": "./dist/esbuild.js",
-      "import": "./dist/esbuild.mjs"
+      "require": "./dist/esbuild.cjs",
+      "import": "./dist/esbuild.js"
+    },
+    "./farm": {
+      "require": "./dist/farm.cjs",
+      "import": "./dist/farm.js"
     },
     "./*": [
       "./*",
@@ -80,7 +97,7 @@
     "unplugin": "^2.0.0-beta.1"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^4.5.0",
+    "@sxzz/eslint-config": "^4.5.1",
     "@sxzz/prettier-config": "^2.0.2",
     "@sxzz/test-utils": "^0.3.7",
     "@types/node": "^22.10.1",
