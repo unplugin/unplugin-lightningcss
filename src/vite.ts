@@ -1,3 +1,22 @@
-import unplugin from '.'
+/**
+ * This entry file is for Vite plugin.
+ *
+ * @module
+ */
 
-export default unplugin.vite
+import LightningCSS from './index'
+
+/**
+ * Vite plugin
+ *
+ * @example
+ * ```ts
+ * // vite.config.js
+ * import LightningCSS from 'unplugin-isolated-decl/vite'
+ *
+ * export default {
+ *   plugins: [LightningCSS()],
+ * }
+ * ```
+ */
+export default LightningCSS.vite as typeof LightningCSS.vite

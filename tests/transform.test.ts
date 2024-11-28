@@ -1,7 +1,7 @@
 import { resolve } from 'node:path'
-import { describe } from 'vitest'
 import { rollupBuild, testFixtures } from '@sxzz/test-utils'
 import css from 'rollup-plugin-css-only'
+import { describe } from 'vitest'
 import LightningCSS from '../src/rollup'
 
 describe('transform', async () => {
