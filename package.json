@@ -1,7 +1,7 @@
 {
   "name": "unplugin-lightningcss",
   "version": "0.2.0",
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@9.14.3",
   "description": "Lightning CSS integration for Vite, Rollup, esbuild, Webpack, Vue CLI, and more.",
   "type": "module",
   "keywords": [
