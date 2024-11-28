@@ -1,6 +1,6 @@
 # unplugin-lightningcss [![npm](https://img.shields.io/npm/v/unplugin-lightningcss.svg)](https://npmjs.com/package/unplugin-lightningcss)
 
-[![Unit Test](https://github.com/sxzz/unplugin-lightningcss/actions/workflows/unit-test.yml/badge.svg)](https://github.com/sxzz/unplugin-lightningcss/actions/workflows/unit-test.yml)
+[![Unit Test](https://github.com/unplugin/unplugin-lightningcss/actions/workflows/unit-test.yml/badge.svg)](https://github.com/unplugin/unplugin-lightningcss/actions/workflows/unit-test.yml)
 
 Lightning CSS integration for Vite, Rollup, esbuild, Webpack, Vue CLI, and more.
 

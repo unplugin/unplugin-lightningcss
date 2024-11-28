@@ -11,13 +11,13 @@
     "webpack"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/sxzz/unplugin-lightningcss#readme",
+  "homepage": "https://github.com/unplugin/unplugin-lightningcss#readme",
   "bugs": {
-    "url": "https://github.com/sxzz/unplugin-lightningcss/issues"
+    "url": "https://github.com/unplugin/unplugin-lightningcss/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sxzz/unplugin-lightningcss.git"
+    "url": "git+https://github.com/unplugin/unplugin-lightningcss.git"
   },
   "author": "三咲智子 <sxzz@sxzz.moe>",
   "files": [
