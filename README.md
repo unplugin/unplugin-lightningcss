@@ -1,4 +1,4 @@
-# unplugin-lightningcss [![npm](https://img.shields.io/npm/v/unplugin-lightningcss.svg)](https://npmjs.com/package/unplugin-lightningcss)
+# unplugin-lightningcss [![npm](https://img.shields.io/npm/v/unplugin-lightningcss.svg)](https://npmjs.com/package/unplugin-lightningcss) [![jsr](https://jsr.io/badges/@unplugin/lightningcss)](https://jsr.io/@unplugin/lightningcss)
 
 [![Unit Test](https://github.com/unplugin/unplugin-lightningcss/actions/workflows/unit-test.yml/badge.svg)](https://github.com/unplugin/unplugin-lightningcss/actions/workflows/unit-test.yml)
 
@@ -64,6 +64,22 @@ module.exports = {
 ```
 
 <br></details>
+
+## Example
+
+```ts
+import { Features } from 'lightningcss'
+
+export default {
+  plugins: [
+    LightningCSS({
+      options: {
+        include: Features.Nesting,
+      },
+    }),
+  ],
+}
+```
 
 ## Sponsors
 
