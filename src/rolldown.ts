@@ -12,7 +12,7 @@ import LightningCSS from './index'
  * @example
  * ```ts
  * // rolldown.config.js
- * import LightningCSS from 'unplugin-isolated-decl/rolldown'
+ * import LightningCSS from 'unplugin-lightningcss/rolldown'
  *
  * export default {
  *   plugins: [LightningCSS()],

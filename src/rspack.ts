@@ -12,7 +12,7 @@ import LightningCSS from './index'
  * @example
  * ```ts
  * // rspack.config.js
- * import LightningCSS from 'unplugin-isolated-decl/rspack'
+ * import LightningCSS from 'unplugin-lightningcss/rspack'
  *
  * export default {
  *   plugins: [LightningCSS()],

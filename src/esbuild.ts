@@ -14,7 +14,7 @@ import LightningCSS from './index'
  * import { build } from 'esbuild'
  *
  * build({
- *   plugins: [require('unplugin-isolated-decl/esbuild')()],
+ *   plugins: [require('unplugin-lightningcss/esbuild')()],
  * })
  * ```
  */

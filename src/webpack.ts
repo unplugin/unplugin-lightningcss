@@ -12,7 +12,7 @@ import LightningCSS from './index'
  * @example
  * ```ts
  * // webpack.config.js
- * import LightningCSS from 'unplugin-isolated-decl/webpack'
+ * import LightningCSS from 'unplugin-lightningcss/webpack'
  *
  * export default {
  *   plugins: [LightningCSS()],

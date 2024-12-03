@@ -12,7 +12,7 @@ import LightningCSS from './index'
  * @example
  * ```ts
  * // farm.config.js
- * import LightningCSS from 'unplugin-isolated-decl/farm'
+ * import LightningCSS from 'unplugin-lightningcss/farm'
  *
  * export default {
  *   plugins: [LightningCSS()],

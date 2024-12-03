@@ -12,7 +12,7 @@ import LightningCSS from './index'
  * @example
  * ```ts
  * // vite.config.js
- * import LightningCSS from 'unplugin-isolated-decl/vite'
+ * import LightningCSS from 'unplugin-lightningcss/vite'
  *
  * export default {
  *   plugins: [LightningCSS()],
