@@ -30,9 +30,10 @@ export default defineConfig({
 ```ts
 // rollup.config.js
 import LightningCSS from 'unplugin-lightningcss/rollup'
+import css from 'rollup-plugin-css-only'
 
 export default {
-  plugins: [LightningCSS()],
+  plugins: [LightningCSS(), css()],
 }
 ```
 
