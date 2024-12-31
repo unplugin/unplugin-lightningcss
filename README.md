@@ -27,10 +27,12 @@ export default defineConfig({
 <details>
 <summary>Rollup</summary><br>
 
+Since Rollup does not support CSS out of the box, you need to use a CSS plugin like [`rollup-plugin-css-only`](https://github.com/thgh/rollup-plugin-css-only).
+
 ```ts
 // rollup.config.js
-import LightningCSS from 'unplugin-lightningcss/rollup'
 import css from 'rollup-plugin-css-only'
+import LightningCSS from 'unplugin-lightningcss/rollup'
 
 export default {
   plugins: [LightningCSS(), css()],
