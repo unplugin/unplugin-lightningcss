@@ -1,7 +1,7 @@
 {
   "name": "unplugin-lightningcss",
   "version": "0.2.1",
-  "packageManager": "pnpm@9.15.1",
+  "packageManager": "pnpm@9.15.2",
   "description": "Lightning CSS integration for Vite, Rollup, esbuild, Webpack, Vue CLI, and more.",
   "type": "module",
   "keywords": [
@@ -98,13 +98,13 @@
     "@rollup/pluginutils": "^5.1.4",
     "lightningcss": "^1.28.2",
     "magic-string": "^0.30.17",
-    "unplugin": "^2.1.0"
+    "unplugin": "^2.1.2"
   },
   "devDependencies": {
     "@sxzz/eslint-config": "^4.5.1",
     "@sxzz/prettier-config": "^2.0.2",
     "@sxzz/test-utils": "^0.3.11",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.10.5",
     "@types/rollup-plugin-css-only": "^3.1.3",
     "bumpp": "^9.9.2",
     "eslint": "^9.17.0",
@@ -115,7 +115,7 @@
     "tsup": "^8.3.5",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
-    "vite": "^6.0.6",
+    "vite": "^6.0.7",
     "vitest": "^2.1.8",
     "vue": "^3.5.13"
   },
