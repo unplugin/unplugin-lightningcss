@@ -106,7 +106,7 @@
     "@sxzz/test-utils": "^0.3.11",
     "@types/node": "^22.10.2",
     "@types/rollup-plugin-css-only": "^3.1.3",
-    "bumpp": "^9.9.2",
+    "bumpp": "^10.0.1",
     "eslint": "^9.17.0",
     "fast-glob": "^3.3.2",
     "prettier": "^3.4.2",
