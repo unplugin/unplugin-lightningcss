@@ -1,5 +1,5 @@
-import { promises as fs } from 'node:fs'
 import { Buffer } from 'node:buffer'
+import { promises as fs } from 'node:fs'
 import { transform } from 'lightningcss'
 import type { Options } from './options'
 

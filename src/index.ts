@@ -1,8 +1,8 @@
 import { createFilter } from '@rollup/pluginutils'
 import { createUnplugin, type UnpluginInstance } from 'unplugin'
 import { resolveOption, type Options } from './core/options'
+import { resolveId } from './core/resolve-id'
 import { transformCss, transformCssModule } from './core/transform'
-import { resolveId } from './core/resolveId'
 
 const plugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
   (rawOptions = {}) => {
@@ -28,28 +28,25 @@ const plugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
         return transformCss(id, code, options.options)
       },
 
-      async load(id) {
+      load(id) {
         if (id.endsWith('.module_built.css')) {
-          const code = transformedFiles.get(id)
+          const code = transformedFiles.get(id)!
           return {
             id,
             code,
           }
         }
         if (id.endsWith('?css_module')) {
-          const {
-            code,
-            map,
-            exports,
-            id: compiledId,
-          } = await transformCssModule(id, options.options)
-          transformedFiles.set(compiledId, code)
-          return {
-            code: `import "${compiledId}";\n${exports}`,
-            map: map,
-          }
+          return transformCssModule(id, options.options).then(
+            ({ code, map, exports, id: compiledId }) => {
+              transformedFiles.set(compiledId, code)
+              return {
+                code: `import "${compiledId}";\n${exports}`,
+                map,
+              }
+            },
+          )
         }
-        return null
       },
     }
   },
