@@ -38,7 +38,9 @@ export async function transformCssModule(
     filename,
     code: Buffer.from(code),
   })
-  const compiledId = actualId.replace(/\.module\.css$/, '.module_built.css')
+  const compiledId = actualId
+    .replaceAll('\\', '/')
+    .replace(/\.module\.css$/, '.module_built.css')
   return {
     code: res.code.toString(),
     map: 'map' in res ? res.map?.toString() : undefined,
