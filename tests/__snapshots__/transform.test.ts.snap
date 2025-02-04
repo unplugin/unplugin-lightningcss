@@ -1,14 +1,14 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`CSS Modules > should transform CSS Modules 1`] = `
-"// assets/asset-BMw4fbKn
-.MB2r4G_button{color:red;bakcground-color:blue}
+"// assets/asset-B29LbBSd
+.zT-8La_button{color:red;bakcground-color:blue}
 
 // index.js
-const button = "MB2r4G_button";
+const button = "zT-8La_button";
 
 const btn = document.createElement('div').classList.add(button);
-document.body.appendChild(btn);
+document.body.append(btn);
 "
 `;
 

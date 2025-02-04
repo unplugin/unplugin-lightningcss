@@ -31,24 +31,23 @@ const plugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
         return transformCss(id, code, options.options)
       },
 
-      load(id) {
+      async load(id) {
         if (id.endsWith('.module_built.css')) {
           const code = transformedFiles.get(id)!
-          return {
-            id,
-            code,
-          }
+          return { id, code }
         }
         if (id.endsWith('?css_module')) {
-          return transformCssModule(id, options.options).then(
-            ({ code, map, exports, id: compiledId }) => {
-              transformedFiles.set(compiledId, code)
-              return {
-                code: `import "${compiledId}";\n${exports}`,
-                map,
-              }
-            },
-          )
+          const {
+            code,
+            map,
+            exports,
+            id: compiledId,
+          } = await transformCssModule(id, options.options)
+          transformedFiles.set(compiledId, code)
+          return {
+            code: `import "${compiledId}";\n${exports}`,
+            map,
+          }
         }
       },
     }

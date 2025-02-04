@@ -1,5 +1,5 @@
 import { Buffer } from 'node:buffer'
-import { promises as fs } from 'node:fs'
+import { readFile } from 'node:fs/promises'
 import { transform } from 'lightningcss'
 import type { Options } from './options'
 
@@ -30,7 +30,7 @@ export async function transformCssModule(
   options: Options['options'],
 ): Promise<{ code: string; map?: string; exports: string; id: string }> {
   const actualId = id.replace(/\?css_module$/, '')
-  const code = await fs.readFile(actualId, 'utf-8')
+  const code = await readFile(actualId, 'utf-8')
   const filename = cleanUrl(actualId)
   const res = transform({
     cssModules: true,
