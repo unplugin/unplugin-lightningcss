@@ -1,7 +1,7 @@
+import path from 'node:path'
 import { createFilter } from '@rollup/pluginutils'
 import { createUnplugin, type UnpluginInstance } from 'unplugin'
 import { resolveOption, type Options } from './core/options'
-import { resolveId } from './core/resolve-id'
 import { transformCss, transformCssModule } from './core/transform'
 
 const plugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
@@ -21,7 +21,10 @@ const plugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
       },
 
       resolveId(id, importer) {
-        return resolveId(id, importer!)
+        if (id.endsWith('.module_built.css')) return id
+        if (id.endsWith('.module.css')) {
+          return `${path.resolve(path.dirname(importer || ''), id)}?css_module`
+        }
       },
 
       transform(code, id) {
