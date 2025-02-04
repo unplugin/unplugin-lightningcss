@@ -1,5 +1,17 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`CSS Modules > should transform CSS Modules 1`] = `
+"// assets/asset-B_IWpIjy
+.dummy_dummy_button{color:red;bakcground-color:blue}
+
+// index.js
+const button = "dummy_button";
+
+const btn = document.createElement('div').classList.add(button);
+document.body.append(btn);
+"
+`;
+
 exports[`transform > tests/fixtures/basic.css 1`] = `
 "// assets/asset-CuZ0KhGL
 .red{color:red}
