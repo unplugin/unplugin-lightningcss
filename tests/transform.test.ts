@@ -28,17 +28,20 @@ describe('transform', async () => {
 describe('CSS Modules', () => {
   it('should transform CSS Modules', async () => {
     const entry = resolve(__dirname, './css-module-fixture/index.js')
-    const build = await rollupBuild(entry, [
+    const { snapshot } = await rollupBuild(entry, [
       LightningCSS({
         options: {
           minify: true,
           targets: {
             ie: 11,
           },
+          cssModules: {
+            pattern: 'dummy_[local]',
+          },
         },
       }),
       css(),
     ])
-    expect(build.snapshot).toMatchSnapshot()
+    expect(snapshot).toMatchSnapshot()
   })
 })
