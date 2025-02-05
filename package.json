@@ -65,10 +65,10 @@
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
-    "@rollup/pluginutils": "^5.1.4",
     "lightningcss": "^1.29.1",
     "magic-string": "^0.30.17",
-    "unplugin": "^2.1.2"
+    "unplugin": "^2.1.2",
+    "unplugin-utils": "^0.2.2"
   },
   "devDependencies": {
     "@sxzz/eslint-config": "^5.0.1",

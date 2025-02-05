@@ -11,9 +11,6 @@ importers:
 
   .:
     dependencies:
-      '@rollup/pluginutils':
-        specifier: ^5.1.4
-        version: 5.1.4(rollup@4.34.4)
       lightningcss:
         specifier: ^1.29.1
         version: 1.29.1
@@ -23,6 +20,9 @@ importers:
       unplugin:
         specifier: ^2.1.2
         version: 2.1.2
+      unplugin-utils:
+        specifier: ^0.2.2
+        version: 0.2.2
     devDependencies:
       '@sxzz/eslint-config':
         specifier: ^5.0.1

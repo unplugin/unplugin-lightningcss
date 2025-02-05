@@ -1,6 +1,6 @@
 import path from 'node:path'
-import { createFilter } from '@rollup/pluginutils'
 import { createUnplugin, type UnpluginInstance } from 'unplugin'
+import { createFilter } from 'unplugin-utils'
 import { resolveOption, type Options } from './core/options'
 import { transformCss, transformCssModule } from './core/transform'
 
