@@ -1,5 +1,5 @@
 /**
- * This entry file is for Vite plugin.
+ * This entry file is for Rspack plugin.
  *
  * @module
  */
@@ -7,16 +7,18 @@
 import LightningCSS from './index'
 
 /**
- * Vite plugin
+ * Rspack plugin
  *
  * @example
- * ```ts
+ * ```js
  * // rspack.config.js
  * import LightningCSS from 'unplugin-lightningcss/rspack'
  *
- * export default {
- *   plugins: [LightningCSS()],
+ * default export {
+ *  plugins: [LightningCSS()],
  * }
  * ```
  */
-export default LightningCSS.rspack as typeof LightningCSS.rspack
+const rspack = LightningCSS.rspack as typeof LightningCSS.rspack
+export default rspack
+export { rspack as 'module.exports' }

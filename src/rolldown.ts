@@ -12,11 +12,13 @@ import LightningCSS from './index'
  * @example
  * ```ts
  * // rolldown.config.js
- * import LightningCSS from 'unplugin-lightningcss/rolldown'
+ * import Starter from 'unplugin-lightningcss/rolldown'
  *
  * export default {
- *   plugins: [LightningCSS()],
+ *   plugins: [Starter()],
  * }
  * ```
  */
-export default LightningCSS.rolldown as typeof LightningCSS.rolldown
+const rolldown = LightningCSS.rolldown as typeof LightningCSS.rolldown
+export default rolldown
+export { rolldown as 'module.exports' }

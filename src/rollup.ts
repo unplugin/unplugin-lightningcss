@@ -12,11 +12,13 @@ import LightningCSS from './index'
  * @example
  * ```ts
  * // rollup.config.js
- * import LightningCSS from 'unplugin-lightningcss/rollup'
+ * import Starter from 'unplugin-lightningcss/rollup'
  *
  * export default {
- *   plugins: [LightningCSS()],
+ *   plugins: [Starter()],
  * }
  * ```
  */
-export default LightningCSS.rollup as typeof LightningCSS.rollup
+const rollup = LightningCSS.rollup as typeof LightningCSS.rollup
+export default rollup
+export { rollup as 'module.exports' }

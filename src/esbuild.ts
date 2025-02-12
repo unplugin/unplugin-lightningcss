@@ -12,10 +12,11 @@ import LightningCSS from './index'
  * @example
  * ```ts
  * import { build } from 'esbuild'
- *
- * build({
- *   plugins: [require('unplugin-lightningcss/esbuild')()],
- * })
- * ```
+ * import LightningCSS from 'unplugin-lightningcss/esbuild'
+ * 
+ * build({ plugins: [LightningCSS()] })
+```
  */
-export default LightningCSS.esbuild as typeof LightningCSS.esbuild
+const esbuild = LightningCSS.esbuild as typeof LightningCSS.esbuild
+export default esbuild
+export { esbuild as 'module.exports' }

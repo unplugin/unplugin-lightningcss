@@ -1,5 +1,5 @@
 /**
- * This entry file is for Vite plugin.
+ * This entry file is for webpack plugin.
  *
  * @module
  */
@@ -7,16 +7,18 @@
 import LightningCSS from './index'
 
 /**
- * Vite plugin
+ * Webpack plugin
  *
  * @example
- * ```ts
+ * ```js
  * // webpack.config.js
  * import LightningCSS from 'unplugin-lightningcss/webpack'
  *
- * export default {
- *   plugins: [LightningCSS()],
+ * default export {
+ *  plugins: [LightningCSS()],
  * }
  * ```
  */
-export default LightningCSS.webpack as typeof LightningCSS.webpack
+const webpack = LightningCSS.webpack as typeof LightningCSS.webpack
+export default webpack
+export { webpack as 'module.exports' }

@@ -11,12 +11,14 @@ import LightningCSS from './index'
  *
  * @example
  * ```ts
- * // vite.config.js
- * import LightningCSS from 'unplugin-lightningcss/vite'
+ * // vite.config.ts
+ * import Starter from 'unplugin-lightningcss/vite'
  *
- * export default {
- *   plugins: [LightningCSS()],
- * }
+ * export default defineConfig({
+ *   plugins: [Starter()],
+ * })
  * ```
  */
-export default LightningCSS.vite as typeof LightningCSS.vite
+const vite = LightningCSS.vite as typeof LightningCSS.vite
+export default vite
+export { vite as 'module.exports' }

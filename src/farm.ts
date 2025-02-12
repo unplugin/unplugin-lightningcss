@@ -12,11 +12,13 @@ import LightningCSS from './index'
  * @example
  * ```ts
  * // farm.config.js
- * import LightningCSS from 'unplugin-lightningcss/farm'
+ * import Starter from 'unplugin-lightningcss/farm'
  *
  * export default {
- *   plugins: [LightningCSS()],
+ *   plugins: [Starter()],
  * }
  * ```
  */
-export default LightningCSS.farm as typeof LightningCSS.farm
+const farm = LightningCSS.farm as typeof LightningCSS.farm
+export default farm
+export { farm as 'module.exports' }
