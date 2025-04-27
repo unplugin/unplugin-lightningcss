@@ -1,6 +1,5 @@
 import { Buffer } from 'node:buffer'
 import { readFile } from 'node:fs/promises'
-import { transform } from 'lightningcss'
 import type { Options } from './options'
 
 const postfixRE = /[#?].*$/s
@@ -8,12 +7,13 @@ function cleanUrl(url: string): string {
   return url.replace(postfixRE, '')
 }
 
-export function transformCss(
+export async function transformCss(
   id: string,
   code: string,
   options: Options['options'],
-): { code: string; map?: string } {
+): Promise<{ code: string; map?: string }> {
   const filename = cleanUrl(id)
+  const { transform } = await import('lightningcss')
   const res = transform({
     ...options,
     filename,
@@ -32,6 +32,7 @@ export async function transformCssModule(
   const actualId = id.replace(/\?css_module$/, '')
   const code = await readFile(actualId, 'utf-8')
   const filename = cleanUrl(actualId)
+  const { transform } = await import('lightningcss')
   const res = transform({
     cssModules: true,
     ...options,
