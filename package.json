@@ -1,7 +1,7 @@
 {
   "name": "unplugin-lightningcss",
   "version": "0.3.2",
-  "packageManager": "pnpm@10.5.2",
+  "packageManager": "pnpm@10.9.0",
   "description": "Lightning CSS integration for Vite, Rollup, esbuild, Webpack, Vue CLI, and more.",
   "type": "module",
   "keywords": [
@@ -66,28 +66,28 @@
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
-    "lightningcss": "^1.29.1",
+    "lightningcss": "^1.29.3",
     "magic-string": "^0.30.17",
-    "unplugin": "^2.2.0",
+    "unplugin": "^2.3.2",
     "unplugin-utils": "^0.2.4"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^5.2.0",
-    "@sxzz/prettier-config": "^2.2.0",
-    "@sxzz/test-utils": "^0.5.1",
-    "@types/node": "^22.13.9",
+    "@sxzz/eslint-config": "^6.1.2",
+    "@sxzz/prettier-config": "^2.2.1",
+    "@sxzz/test-utils": "^0.5.5",
+    "@types/node": "^22.15.2",
     "@types/rollup-plugin-css-only": "^3.1.3",
-    "bumpp": "^10.0.3",
-    "eslint": "^9.21.0",
+    "bumpp": "^10.1.0",
+    "eslint": "^9.25.1",
     "fast-glob": "^3.3.3",
     "prettier": "^3.5.3",
-    "rollup": "^4.34.9",
+    "rollup": "^4.40.0",
     "rollup-plugin-css-only": "^4.5.2",
-    "tsdown": "^0.6.3",
+    "tsdown": "^0.9.8",
     "tsx": "^4.19.3",
-    "typescript": "^5.8.2",
-    "vite": "^6.2.0",
-    "vitest": "^3.0.7",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.3",
+    "vitest": "^3.1.2",
     "vue": "^3.5.13"
   },
   "engines": {
@@ -95,6 +95,6 @@
   },
   "prettier": "@sxzz/prettier-config",
   "resolutions": {
-    "@types/rollup-plugin-css-only>rollup": "latest"
+    "@types/rollup-plugin-css-only>rollup": "-"
   }
 }
