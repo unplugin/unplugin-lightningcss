@@ -82,7 +82,7 @@
     "prettier": "^3.5.3",
     "rollup": "^4.40.0",
     "rollup-plugin-css-only": "^4.5.2",
-    "tsdown": "^0.9.8",
+    "tsdown": "^0.9.9",
     "tsx": "^4.19.3",
     "typescript": "^5.8.3",
     "vite": "^6.3.3",
