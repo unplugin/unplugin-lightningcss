@@ -1,13 +1,11 @@
 import path from 'node:path'
 import { createUnplugin, type UnpluginInstance } from 'unplugin'
-import { createFilter } from 'unplugin-utils'
 import { resolveOption, type Options } from './core/options'
 import { transformCss, transformCssModule } from './core/transform'
 
 const plugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
   (rawOptions = {}) => {
     const options = resolveOption(rawOptions)
-    const filter = createFilter(options.include, options.exclude)
 
     const transformedFiles = new Map<string, string>()
 
@@ -16,10 +14,6 @@ const plugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
       name,
       enforce: options.enforce,
 
-      transformInclude(id) {
-        return filter(id)
-      },
-
       resolveId(id, importer) {
         if (id.endsWith('.module_built.css')) return id
         if (id.endsWith('.module.css')) {
@@ -27,16 +21,30 @@ const plugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
         }
       },
 
-      transform(code, id) {
-        return transformCss(id, code, options.options)
+      transform: {
+        filter: {
+          id: {
+            include: options.include,
+            exclude: options.exclude,
+          },
+        },
+        handler(code, id) {
+          return transformCss(id, code, options.options)
+        },
       },
 
-      async load(id) {
-        if (id.endsWith('.module_built.css')) {
-          const code = transformedFiles.get(id)!
-          return { id, code }
-        }
-        if (id.endsWith('?css_module')) {
+      load: {
+        filter: {
+          id: {
+            include: [/\.module_built\.css$/, /\?css_module$/],
+          },
+        },
+        async handler(id) {
+          if (id.endsWith('.module_built.css')) {
+            const code = transformedFiles.get(id)!
+            return { id, code }
+          }
+
           const {
             code,
             map,
@@ -48,7 +56,7 @@ const plugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
             code: `import "${compiledId}";\n${exports}`,
             map,
           }
-        }
+        },
       },
     }
   },

@@ -1,5 +1,5 @@
 import type { TransformOptions } from 'lightningcss'
-import type { FilterPattern } from 'unplugin-utils'
+import type { FilterPattern } from 'unplugin'
 
 export type Options = {
   include?: FilterPattern
