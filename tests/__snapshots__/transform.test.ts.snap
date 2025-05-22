@@ -5,9 +5,11 @@ exports[`CSS Modules > should transform CSS Modules 1`] = `
 .dummy_dummy_button{color:red;bakcground-color:blue}
 
 // index.js
-const button = "dummy_button";
+const classes = {"button":"dummy_button"};
 
-const btn = document.createElement('div').classList.add(button);
+const _button0 = classes["button"];
+
+const btn = document.createElement('div').classList.add(_button0);
 document.body.append(btn);
 "
 `;
