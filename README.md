@@ -1,6 +1,9 @@
-# unplugin-lightningcss [![npm](https://img.shields.io/npm/v/unplugin-lightningcss.svg)](https://npmjs.com/package/unplugin-lightningcss) [![jsr](https://jsr.io/badges/@unplugin/lightningcss)](https://jsr.io/@unplugin/lightningcss)
+# unplugin-lightningcss
 
-[![Unit Test](https://github.com/unplugin/unplugin-lightningcss/actions/workflows/unit-test.yml/badge.svg)](https://github.com/unplugin/unplugin-lightningcss/actions/workflows/unit-test.yml)
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![JSR][jsr-src]][jsr-href]
+[![Unit Test][unit-test-src]][unit-test-href]
 
 Lightning CSS integration for Vite, Rollup, esbuild, Webpack, Vue CLI, and more.
 
@@ -94,4 +97,15 @@ export default {
 
 ## License
 
-[MIT](./LICENSE) License © 2023-PRESENT [三咲智子](https://github.com/sxzz)
+[MIT](./LICENSE) License © 2023-PRESENT [Kevin Deng](https://github.com/sxzz)
+
+<!-- Badges -->
+
+[npm-version-src]: https://img.shields.io/npm/v/unplugin-lightningcss.svg
+[npm-version-href]: https://npmjs.com/package/unplugin-lightningcss
+[npm-downloads-src]: https://img.shields.io/npm/dm/unplugin-lightningcss
+[npm-downloads-href]: https://www.npmcharts.com/compare/unplugin-lightningcss?interval=30
+[jsr-src]: https://jsr.io/badges/@unplugin/lightningcss
+[jsr-href]: https://jsr.io/@unplugin/lightningcss
+[unit-test-src]: https://github.com/unplugin/unplugin-lightningcss/actions/workflows/unit-test.yml/badge.svg
+[unit-test-href]: https://github.com/unplugin/unplugin-lightningcss/actions/workflows/unit-test.yml
