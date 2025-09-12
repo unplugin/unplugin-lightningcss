@@ -1,15 +1,15 @@
 import { resolve } from 'node:path'
-import { rollupBuild, testFixtures } from '@sxzz/test-utils'
+import { rolldownBuild, rollupBuild, testFixtures } from '@sxzz/test-utils'
 import css from 'rollup-plugin-css-only'
 import { describe, expect, it } from 'vitest'
 import LightningCSS from '../src/rollup'
 
-describe('transform', async () => {
+describe.each(['rollup', 'rolldown'] as const)('%s transform', async (type) => {
   await testFixtures(
     ['tests/fixtures/*.css'],
     async (args, id) =>
       (
-        await rollupBuild(id, [
+        await (type === 'rollup' ? rollupBuild : rolldownBuild)(id, [
           LightningCSS({
             options: {
               minify: true,
@@ -17,8 +17,9 @@ describe('transform', async () => {
                 ie: 11,
               },
             },
+            asString: id.includes('as-string'),
           }),
-          css(),
+          type === 'rollup' && css(),
         ])
       ).snapshot,
     { cwd: resolve(__dirname, '..'), promise: true },

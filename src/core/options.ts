@@ -6,6 +6,11 @@ export type Options = {
   exclude?: FilterPattern
   enforce?: 'pre' | 'post' | undefined
   options?: Omit<TransformOptions<any>, 'code' | 'filename'>
+  /**
+   * Whether to export the transformed CSS as a default string export.
+   * @default false
+   */
+  asString?: boolean
 }
 
 type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U
@@ -21,5 +26,6 @@ export function resolveOption(options: Options): OptionsResolved {
     exclude: options.exclude || [/node_modules/],
     enforce: 'enforce' in options ? options.enforce : 'pre',
     options: options.options || {},
+    asString: options.asString || false,
   }
 }

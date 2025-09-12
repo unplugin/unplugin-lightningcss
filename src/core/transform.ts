@@ -11,17 +11,27 @@ export async function transformCss(
   id: string,
   code: string,
   options: Options['options'],
-): Promise<{ code: string; map?: string }> {
+  asString?: boolean,
+): Promise<{ code: string; map?: string; moduleType: 'css' | 'js' }> {
   const filename = cleanUrl(id)
   const { transform } = await import('lightningcss')
-  const res = transform({
+  const result = transform({
     ...options,
     filename,
     code: Buffer.from(code),
   })
+  let resultCode = result.code.toString()
+  if (asString) {
+    resultCode = `export default ${JSON.stringify(resultCode)}`
+  }
   return {
-    code: res.code.toString(),
-    map: 'map' in res ? res.map?.toString() : undefined,
+    code: resultCode,
+    map: asString
+      ? undefined
+      : 'map' in result
+        ? result.map?.toString()
+        : undefined,
+    moduleType: asString ? 'js' : 'css',
   }
 }
 

@@ -71,7 +71,7 @@ module.exports = {
 
 <br></details>
 
-## Example
+## Options
 
 ```ts
 import { Features } from 'lightningcss'
@@ -82,6 +82,12 @@ export default {
       options: {
         include: Features.Nesting,
       },
+
+      /**
+       * Whether to export the transformed CSS as a default string export.
+       * @default false
+       */
+      asString: false,
     }),
   ],
 }

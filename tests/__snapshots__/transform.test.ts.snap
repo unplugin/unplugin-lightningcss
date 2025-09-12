@@ -14,7 +14,53 @@ document.body.append(btn);
 "
 `;
 
-exports[`transform > tests/fixtures/basic.css 1`] = `
+exports[`rolldown transform > tests/fixtures/as-string.css 1`] = `
+"// as-string.js
+//#region tests/fixtures/as-string.css
+var as_string_default = ".red{color:red}";
+
+//#endregion
+export { as_string_default as default };"
+`;
+
+exports[`rolldown transform > tests/fixtures/basic.css 1`] = `
+"// basic.css
+.red{color:red}
+
+// basic.js
+"
+`;
+
+exports[`rolldown transform > tests/fixtures/import.css 1`] = `
+"// import.css
+.red{color:red}
+
+
+// import.js
+//#region tests/fixtures/basic.css
+var basic_default = {};
+
+//#endregion"
+`;
+
+exports[`rolldown transform > tests/fixtures/nesting.css 1`] = `
+"// nesting.css
+.a .b{color:red}
+
+// nesting.js
+"
+`;
+
+exports[`rollup transform > tests/fixtures/as-string.css 1`] = `
+"// as-string.js
+
+
+// assets/asset-CRu7KFtz
+export default ".red{color:red}"
+"
+`;
+
+exports[`rollup transform > tests/fixtures/basic.css 1`] = `
 "// assets/asset-CuZ0KhGL
 .red{color:red}
 
@@ -23,7 +69,7 @@ exports[`transform > tests/fixtures/basic.css 1`] = `
 "
 `;
 
-exports[`transform > tests/fixtures/import.css 1`] = `
+exports[`rollup transform > tests/fixtures/import.css 1`] = `
 "// assets/asset-C9cPOTFW
 @import "./basic.css";
 
@@ -32,7 +78,7 @@ exports[`transform > tests/fixtures/import.css 1`] = `
 "
 `;
 
-exports[`transform > tests/fixtures/nesting.css 1`] = `
+exports[`rollup transform > tests/fixtures/nesting.css 1`] = `
 "// assets/asset-B4RRm-s2
 .a .b{color:red}
 

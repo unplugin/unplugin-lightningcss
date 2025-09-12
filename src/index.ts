@@ -29,7 +29,7 @@ const plugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
           },
         },
         handler(code, id) {
-          return transformCss(id, code, options.options)
+          return transformCss(id, code, options.options, options.asString)
         },
       },
 
