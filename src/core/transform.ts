@@ -40,7 +40,7 @@ export async function transformCssModule(
   options: Options['options'],
 ): Promise<{ code: string; map?: string; exports: string; id: string }> {
   const actualId = id.replace(/\?css_module$/, '')
-  const code = await readFile(actualId, 'utf-8')
+  const code = await readFile(actualId, 'utf8')
   const filename = cleanUrl(actualId)
   const { transform } = await import('lightningcss')
   const res = transform({
