@@ -1,2 +1,7 @@
+overrides:
+  '@types/rollup-plugin-css-only>rollup': '-'
+
 allowBuilds:
   esbuild: false
+
+trustPolicy: no-downgrade

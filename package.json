@@ -90,8 +90,5 @@
     "vitest": "^4.0.16",
     "vue": "^3.5.26"
   },
-  "resolutions": {
-    "@types/rollup-plugin-css-only>rollup": "-"
-  },
   "prettier": "@sxzz/prettier-config"
 }
