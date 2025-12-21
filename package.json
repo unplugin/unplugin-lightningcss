@@ -70,7 +70,6 @@
   },
   "dependencies": {
     "lightningcss": "^1.30.2",
-    "magic-string": "^0.30.21",
     "unplugin": "^2.3.11"
   },
   "devDependencies": {
