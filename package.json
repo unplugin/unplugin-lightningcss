@@ -71,7 +71,7 @@
     "unplugin": "^3.0.0"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^7.5.0",
+    "@sxzz/eslint-config": "^8.0.0",
     "@sxzz/prettier-config": "^2.2.6",
     "@sxzz/test-utils": "^0.5.15",
     "@types/node": "^25.0.10",
