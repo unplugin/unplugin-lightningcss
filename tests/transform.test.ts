@@ -2,7 +2,7 @@ import { resolve } from 'node:path'
 import { rolldownBuild, rollupBuild, testFixtures } from '@sxzz/test-utils'
 import css from 'rollup-plugin-css-only'
 import { describe, expect, it } from 'vitest'
-import LightningCSS from '../src/rollup'
+import LightningCSS from '../src/rollup.ts'
 
 describe.each(['rollup', 'rolldown'] as const)('%s transform', async (type) => {
   await testFixtures(

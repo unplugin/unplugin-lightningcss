@@ -4,7 +4,7 @@
  * @module
  */
 
-import LightningCSS from './index'
+import LightningCSS from './index.ts'
 
 /**
  * Vite plugin

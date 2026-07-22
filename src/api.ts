@@ -1,1 +1,1 @@
-export { transformCss } from './core/transform'
+export { transformCss } from './core/transform.ts'

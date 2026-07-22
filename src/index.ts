@@ -1,7 +1,7 @@
 import path from 'node:path'
 import { createUnplugin, type UnpluginInstance } from 'unplugin'
-import { resolveOption, type Options } from './core/options'
-import { transformCss, transformCssModule } from './core/transform'
+import { resolveOption, type Options } from './core/options.ts'
+import { transformCss, transformCssModule } from './core/transform.ts'
 
 const plugin: UnpluginInstance<Options | undefined, false> = createUnplugin(
   (rawOptions = {}) => {

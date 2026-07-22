@@ -1,6 +1,6 @@
 import { Buffer } from 'node:buffer'
 import { readFile } from 'node:fs/promises'
-import type { Options } from './options'
+import type { Options } from './options.ts'
 
 const postfixRE = /[#?].*$/s
 function cleanUrl(url: string): string {
